@@ -1,0 +1,42 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    perspective: 550px;
+}
+
+.button
+{
+    font-size: 50px;
+    border: 3px solid white;
+    padding: 20px;
+    position: relative;
+    color : white;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.button::before
+{
+    content: " ";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 120%;
+    background-color: white;
+    height: 50%;
+    position: absolute;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all .5s;
+}
+.button:hover::before
+{
+    transform: translateX(100%) rotate(45deg);
+} 
+.button:hover
+{
+    background-color: red;
+}

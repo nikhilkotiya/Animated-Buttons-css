@@ -1,0 +1,37 @@
+body
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+}
+
+
+.button
+{
+    font-size: 50px;
+    border: 5px solid #000;
+    position: relative;   
+    transition: all 1s;
+}
+.button:before
+{ 
+    content: " ";
+    position:absolute;
+    left: 0;
+    right: 0;
+    background-color: rgb(59, 195, 207);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: translate(100%);
+    transition: all 1s;
+}
+.button:hover:before
+{
+    transform: translate(0px);
+    color: red;
+}
+.button:hover{
+    color: red;
+}

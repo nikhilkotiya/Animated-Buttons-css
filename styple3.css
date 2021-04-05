@@ -1,0 +1,57 @@
+body{
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.button
+{
+    position: relative;
+    font-size: 50px;
+    border: 5px solid black;
+    transition: all 1s;
+}
+
+.button::before
+{
+    content: " ";
+    position:absolute;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 9, 9);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: rotateX(90deg );
+    transition: all 1s;
+
+}
+.button::after
+{
+    content: " ";
+    position:absolute;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 9, 9);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: rotateY(90deg );
+    transition: all 1s;
+
+}
+.button:hover:before
+{
+    transform: rotateX(0deg);
+    color: red;
+}
+.button:hover::after
+{
+    transform: rotateY(0deg);
+    color: red;
+}
+.button:hover{
+    color: rgb(7, 6, 122);
+}

@@ -8,11 +8,14 @@ body{
 
 .button
 {
-    background-color: yellow;
+    text-decoration: none;
     border: 3px solid black;
     font-size: 50px;
+
+    background-color: black;
+    overflow: hidden;
     padding: 20px;
-    position: relative;
+    position:relative;
 }
 .button::before
 {
@@ -20,27 +23,36 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    background-color: yellow;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 1s;
 }
 
 .button::after
 {
-    content:"";
+    content:"Hover me";
     position: absolute;
     top: 0;
     left: 0;
+    background-color: yellow;
     height: 100%;
     width: 100%;
-    background-color: black;
     transition: all 1s;
-    transform: translateX(-100%);
+    transform: translate(-100% ,100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover:before
+{
+    transform: translate(100% ,-100%);
 }
 
 .button:hover::after
 {
-
+    transform: translate(0,0);
 }

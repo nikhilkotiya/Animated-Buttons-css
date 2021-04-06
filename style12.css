@@ -1,0 +1,48 @@
+body{
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+}
+.button
+{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+img 
+{
+    width: 100%;
+    transition: all .5s;
+}
+
+.caption
+{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    height: 20% ;
+    width: 100%;
+    opacity:1;
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transition: all .5s;
+    align-items: center;
+    transform: translateY(100%);
+}
+
+.button:hover .caption{
+    transform: translateY(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    background-color: black;
+}
+.button:hover img{
+    transform: translateY(-20%);
+}

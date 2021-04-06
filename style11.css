@@ -1,0 +1,44 @@
+body{
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+}
+.button
+{
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+img 
+{
+    width: 100%;
+    transition: all .5s;
+}
+
+.caption
+{
+
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100% ;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    color: whitesmoke;
+    transition: all .5s;
+    opacity: .5;
+    align-items: center;
+    transform: translateX(-100%);
+}
+
+.button:hover .caption{
+    transform: translateX(0);
+    background-color: black;
+}
+.button:hover img{
+    transform: scale(1.3) rotate(-15deg);
+}

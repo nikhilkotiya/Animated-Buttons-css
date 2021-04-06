@@ -1,0 +1,41 @@
+body{
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    perspective: 500px;
+
+}
+
+.button
+{
+    text-decoration: none;
+    border: 3px solid black;
+    font-size: 50px;
+    background-color: rgb(226, 226, 226);
+    overflow: hidden;
+    padding: 20px;
+    position:relative;
+}
+.button::before
+{
+    content:"Hover me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(500px);
+    transition: all .5s;
+}
+
+.button:hover::before
+{
+    background-color: black;
+    color: whitesmoke;
+    transform: translateZ(0);
+
+}
